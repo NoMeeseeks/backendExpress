@@ -19,6 +19,7 @@ wZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
             <th>Descripción</th>
             <th>Ruta</th>
             <th>Fecha de creación</th>
+            <th>Etiqueta</th>
         </tr>
         </thead>
         <tbody>
@@ -28,9 +29,8 @@ wZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
                 <td><%= foto.titulo %></td>
                 <td><%= foto.descripcion %></td>
                 <td><%= foto.ruta %></td>
-                <td><%=
-                        foto.createdAt.toLocaleDateString('en-US')
-                    %></td>
+                <td><%= foto.createdAt.toLocaleDateString('en-US') %></td>
+                <td><%= foto.etiqueta.map(instancia => instancia.texto).join(", ") %></td>
             </tr>
         <% }); %>
         </tbody>
