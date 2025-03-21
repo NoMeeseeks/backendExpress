@@ -1,0 +1,57 @@
+<div class="container py-5 d-flex justify-content-center align-items-center">
+    <div class="col-md-6">
+        <div class="card shadow-lg p-4 border-0 rounded-4">
+            <div class="card-body">
+                <h2 class="mb-4 text-center bg-primary text-light p-3 rounded">Ingresa tu foto</h2>
+                <form action="/fotos/guardarDos" method="POST">
+                    <input type="hidden" id="id" name="id"> <!-- Para actualizar foto -->
+
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label fw-bold">Título:</label>
+                        <input type="text" class="form-control border-primary" id="titulo" name="titulo" placeholder="Ejemplo: Mi Foto" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label fw-bold">Descripción:</label>
+                        <textarea class="form-control border-primary" id="descripcion" name="descripcion" placeholder="Ejemplo: Una hermosa puesta de sol..." required></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="ruta" class="form-label fw-bold">Ruta de la Imagen:</label>
+                        <input type="text" class="form-control border-primary" id="ruta" name="ruta" placeholder="Ejemplo: imagenes/foto1.jpg" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="fecha_creacion" class="form-label fw-bold">Fecha de Creación:</label>
+                        <input type="datetime-local" class="form-control border-primary" id="fecha_creacion" name="fecha_creacion" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="calificacion" class="form-label fw-bold">Calificación:</label>
+                        <select class="form-select border-primary" id="calificacion" name="calificacion" required>
+                            <option value="">Seleccione una calificación</option>
+                            <option value="1">1 - Muy Malo</option>
+                            <option value="2">2 - Malo</option>
+                            <option value="3">3 - Regular</option>
+                            <option value="4">4 - Bueno</option>
+                            <option value="5">5 - Excelente</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="etiquetaId" class="form-label fw-bold">Etiqueta:</label>
+                        <select class="form-select border-primary" id="etiquetaId" name="etiquetaId" required>
+                            <option value="">Seleccione una etiqueta</option>
+                            <option value="1">Naturaleza</option>
+                            <option value="2">Retrato</option>
+                            <option value="3">Arquitectura</option>
+                            <!-- Se pueden agregar etiquetas dinámicamente -->
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100">Guardar Foto</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

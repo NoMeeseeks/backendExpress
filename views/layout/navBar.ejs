@@ -1,23 +1,26 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Web</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="/">Album</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/fotos/findAll/view">Fotos</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/fotos/findAll" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Fotos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"  href="/fotos/findAll">Todas las fotos</a></li>
+                            <li><a class="dropdown-item" href="/fotos/calificacion">Calificaciones</a></li>
+                            <li><a class="dropdown-item" href="/fotos/crearFoto">Crear una foto</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pricing">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true" href="#">Disabled</a>
+                        <a class="nav-link" href="/fotos/calificacion">Otros</a>
                     </li>
                 </ul>
             </div>
